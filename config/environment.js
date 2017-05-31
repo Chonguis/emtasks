@@ -1,9 +1,26 @@
 /* eslint-env node */
+// 
+// var config = {
+//   apiKey: "AIzaSyCeX52Yqkk65mHasaPOcXH0ya6nMb-5qFI",
+//   authDomain: "emtasks-12c72.firebaseapp.com",
+//   databaseURL: "https://emtasks-12c72.firebaseio.com",
+//   projectId: "emtasks-12c72",
+//   storageBucket: "emtasks-12c72.appspot.com",
+//   messagingSenderId: "347846220384"
+// };
+// firebase.initializeApp(config);
 
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'emtasks',
     environment: environment,
+    contentSecurityPolicy: {'connect-src': "'self' wss://*.firebaseio.com"},
+    firebase: {
+        apiKey: 'xyz',
+        authDomain: 'emtasks-12c72.firebaseapp.com',
+        databaseURL: 'https://emtasks-12c72.firebaseio.com',
+        storageBucket: 'emtasks-12c72.appspot.com',
+      },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
